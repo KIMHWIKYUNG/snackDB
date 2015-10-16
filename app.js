@@ -13,32 +13,32 @@ var welcomes = require('./routes/welcome')
 var app = express();
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/mogoosedb');
-var UserSchema = mongoose.Schema({
-  id:String,
-  pass:String
-});
-var User = mongoose.model('express',UserSchema);
+// mongoose.connect('mongodb://localhost/mogoosedb');
+// var UserSchema = mongoose.Schema({
+//   id:String,
+//   pass:String
+// });
+// var User = mongoose.model('express',UserSchema);
 
-// mongoose.connect('mongodb://localhost/t');
-// var commentsSchema  = new mongoose.Schema({
-//   _commentsId:{type:Number},
-//   by:{_usersId:{type:Number}, nickname:String},
-//   text:String,
-//   grade:String,
-//   c_timestamp:Date,
-//   snack_name:String
-// });
-// sudo
-// var comment = mongoose.model('comments', commentsSchema);
-// var comments = new comment();
-// //comments._commentsId={1};npm
-// comments.text = "hello";
-// comments.c_timestamp = new Date();
-// comments.snack_name = "새우깡";
-// comments.save(function(err){
-//   if(!err) console.log("success!");
-// });
+mongoose.connect('mongodb://localhost/s');
+var commentsSchema  = new mongoose.Schema({
+  _commentsId:{type:Number},
+  by:{_usersId:{type:Number}, nickname:String},
+  text:String,
+  grade:String,
+  c_timestamp:Date,
+  snack_name:String
+});
+
+var comment = mongoose.model('comments', commentsSchema);
+var comments = new comment();
+//comments._commentsId={1};npm
+comments.text = "hello";
+comments.c_timestamp = new Date();
+comments.snack_name = "새우깡";
+comments.save(function(err){
+  if(!err) console.log("success!");
+});
 
 
 // view engine setup
