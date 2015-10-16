@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1
+    a(href='http://localhost:3000/welcome') #{title}
+  p
+    a(href='http://localhost:3000/hello') Welcome to #{title}
+
+  form(action='http://localhost:3000/login', method='post')
+    p ID :
+      input(type="text" name="idd" )
+    p pass :
+      input(type='text' name='passed' )
+    p
+      input(type='submit' value='OK')
