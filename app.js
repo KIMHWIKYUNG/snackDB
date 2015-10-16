@@ -29,7 +29,7 @@ var User = mongoose.model('express',UserSchema);
 //   c_timestamp:Date,
 //   snack_name:String
 // });
-//
+// sudo
 // var comment = mongoose.model('comments', commentsSchema);
 // var comments = new comment();
 // //comments._commentsId={1};npm
@@ -37,7 +37,7 @@ var User = mongoose.model('express',UserSchema);
 // comments.c_timestamp = new Date();
 // comments.snack_name = "새우깡";
 // comments.save(function(err){
-//   if(!err) console.log(comments.find({text:"hello"}));
+//   if(!err) console.log("success!");
 // });
 
 
